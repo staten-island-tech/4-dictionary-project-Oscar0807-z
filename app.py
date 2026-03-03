@@ -1,1 +1,1 @@
-item 
+item = {"name": "Froot Loops", "price": 7.99, "department": "Food", "Description": "Colored rings of cereal for breakfast"}
