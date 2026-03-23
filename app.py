@@ -29,13 +29,15 @@ for letter in a:
         print ("Goodbye")
         
 if shopping == True:
-    print (items)
-x = input("This is our shopping menu, what would you like to buy")
+    print (items["Price"])
+    x = input("This is our shopping menu, what would you like to buy")
 cart = ()
+cart.append(x)
+print (cart)
 while shopping == True:
-    x=input("Would you like to continue?")
-    cart.append(x)
-for letter in x:
+    y=input("Would you like to continue?")
+    cart.append(y)
+for letter in y:
     if letter == "y":
         shopping = True
     else:
@@ -43,4 +45,4 @@ for letter in x:
 if shopping == False:
     for item in (items):
         for number in cart:
-            print ("name[number]")
+            print (items[0]["name"])
