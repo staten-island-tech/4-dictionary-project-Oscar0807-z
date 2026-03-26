@@ -29,7 +29,7 @@ for letter in a:
         print ("Goodbye")
         
 if shopping == True:
-    print (items["Price"])
+    print (items["name"])
     x = input("This is our shopping menu, what would you like to buy")
 cart = ()
 cart.append(x)
