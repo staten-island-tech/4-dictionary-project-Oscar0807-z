@@ -20,29 +20,14 @@ items = [
  {"name": "Scott Toilet paper", "price": 14.99, "department": "Utilities", "Description": "Pack of toilet paper used for cleanliness"},
  {"name": "Kleenex tissue paper", "price": 18.99, "department": "Utilities", "Description": "A 12 pack of tissues to be discarded after use"}
 ]
-a = input ("Welcome, would you like to shop?")
+a=input("Would you like to shop")
+
 for letter in a:
-    if letter == "y":
-        shopping = True
-    elif letter == "n":
-        shopping = False
-        print ("Goodbye")
-        
-if shopping == True:
-    print (items["name"])
-    x = input("This is our shopping menu, what would you like to buy")
-cart = ()
-cart.append(x)
-print (cart)
-while shopping == True:
-    y=input("Would you like to continue?")
-    cart.append(y)
-for letter in y:
-    if letter == "y":
-        shopping = True
-    else:
-        shopping = False
-if shopping == False:
-    for item in (items):
-        for number in cart:
-            print (items[0]["name"])
+    if letter == "Y":
+        for item in items:
+            print (item["name"])
+for index, item in enumerate(items):
+    print(index, ":", item["name"])
+b=input("Put the item number of what you would like to buy")
+for item in items:
+    items[b]["price"]
