@@ -25,9 +25,6 @@ a=input("Would you like to shop")
 for letter in a:
     if letter == "Y":
         for item in items:
-            print (item["name"])
-for index, item in enumerate(items):
-    print(index, ":", item["name"])
+            for index, item in enumerate(items):
+                print(index, ":", item["name"])
 b=input("Put the item number of what you would like to buy")
-for item in items:
-    items[b]["price"]
