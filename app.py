@@ -23,7 +23,7 @@ items = [
 a=input("Would you like to shop")
 
 for letter in a:
-    if letter == "Y":
+    if letter == "y":
         for item in items:
             for index, item in enumerate(items):
                 print(index, ":", item["name"])
