@@ -28,3 +28,5 @@ for letter in a:
             for index, item in enumerate(items):
                 print(index, ":", item["name"])
 b=input("Put the item number of what you would like to buy")
+for index, item in enumerate(items):
+    print(b, ":", item[b])
