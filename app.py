@@ -31,16 +31,28 @@ def allitems(items):
 
 
 cart1 = []
-def cart ():
-    allitems(items)
-    y = int(input("Put the item number of what you would like to buy"))
-    print(items[y])
-all(items)
-print(items[0])
+shopping = True
+def allitems(items):
+    for index, item in enumerate(items):
+        print(index, ":", item["name"])
+
+
+cart1 = []
+
+y = int(input("Put the item number of what you would like to buy"))
+while shopping == True:
+    cart1.append(y)
+    for character in cart1:
+        print (character, ":", items[character])
+        shopping = False
+        x = int(input("Type 1 if you want to continue shopping"))
+        if x == 1:
+            y = int(input("Put the item number of what you would like to buy"))
+            shopping = True
+
+
 
 
 if shopping == False:
     for character in cart1:
         print(character, ":", items[character])
-    for character in cart1:
-        print
