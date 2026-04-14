@@ -25,34 +25,17 @@ a=input("Would you like to shop")
 for letter in a:
     if letter == "y":
         shopping = True
-def allitems(items):
-    for index, item in enumerate(items):
-        print(index, ":", item["name"])
-
-
-cart1 = []
-shopping = True
-def allitems(items):
-    for index, item in enumerate(items):
-        print(index, ":", item["name"])
-
-
 cart1 = []
 
 y = int(input("Put the item number of what you would like to buy"))
+shopping = True
 while shopping == True:
-    cart1.append(y)
-    for character in cart1:
-        print (character, ":", items[character])
-        shopping = False
-        x = int(input("Type 1 if you want to continue shopping"))
-        if x == 1:
-            y = int(input("Put the item number of what you would like to buy"))
-            shopping = True
-
-
-
-
-if shopping == False:
-    for character in cart1:
-        print(character, ":", items[character])
+    
+    shopping = False
+    x = int(input("Type 1 if you want to continue shopping"))
+    if x == 1:
+        y = int(input("Put the item number of what you would like to buy"))
+        cart1.append(y)
+        for character in cart1:
+            print (character, ":", items[character])
+        shopping = True
