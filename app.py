@@ -26,16 +26,28 @@ for letter in a:
     if letter == "y":
         shopping = True
 cart1 = []
-
+z=0
 y = int(input("Put the item number of what you would like to buy"))
 shopping = True
+cart1.append(y)
+for number in cart1:
+    print (number, ":", items[number])
+    z+=items[number]["price"]
 while shopping == True:
     
     shopping = False
-    x = int(input("Type 1 if you want to continue shopping"))
+    x = int(input("Type 1 if you want to continue shopping. Otherwise, type any other number"))
     if x == 1:
         y = int(input("Put the item number of what you would like to buy"))
         cart1.append(y)
         for character in cart1:
             print (character, ":", items[character])
+        z+=items[character]["price"]
         shopping = True
+    elif x != 1:
+        shopping = False
+        for character in cart1:
+            print (character, ":", items[character])
+        print (z)
+
+    
