@@ -20,10 +20,12 @@ items = [
  {"name": "19. Scott Toilet paper", "price": 14.99, "department": "Utilities", "Description": "Pack of toilet paper used for cleanliness"},
  {"name": "20. leenex tissue paper", "price": 18.99, "department": "Utilities", "Description": "A 12 pack of tissues to be discarded after use"}
 ]
-a = input ("Welcome, would you like to shop?")
+a=input("Would you like to shop")
+
 for letter in a:
     if letter == "y":
         shopping = True
+<<<<<<< HEAD
     elif letter == "n":
         shopping = False
         print ("Goodbye")
@@ -42,10 +44,31 @@ while shopping == True:
     
 for letter in y:
     if letter == "y":
+=======
+cart1 = []
+z=0
+y = int(input("Put the item number of what you would like to buy"))
+shopping = True
+cart1.append(y)
+for number in cart1:
+    print (number, ":", items[number])
+    z+=items[number]["price"]
+while shopping == True:
+    
+    shopping = False
+    x = int(input("Type 1 if you want to continue shopping. Otherwise, type any other number"))
+    if x == 1:
+        y = int(input("Put the item number of what you would like to buy"))
+        cart1.append(y)
+        for character in cart1:
+            print (character, ":", items[character])
+        z+=items[character]["price"]
+>>>>>>> 0b673a7663cd3c78bac8329c19141b0938550cf5
         shopping = True
-    else:
+    elif x != 1:
         shopping = False
-if shopping == False:
-    for item in (items):
-        for number in cart:
-            print (items[0]["name"])
+        for character in cart1:
+            print (character, ":", items[character])
+        print (z)
+
+    
